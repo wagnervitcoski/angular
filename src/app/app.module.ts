@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NovoComponent } from './novo/novo.component';
 import {FormsModule} from '@angular/forms';
+import { ServicoService } from './servico.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

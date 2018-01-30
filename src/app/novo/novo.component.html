@@ -3,4 +3,12 @@
 
 </p>
 <p>{{name}}</p>
+<ul class="list-group">
+    <li *ngFor="let c of cursos" class="list-group-item">
+        {{c}}
+    </li>
+</ul>
+<div class="list-group" *ngFor="let c of cursos">
+    <a href="#" class="list-group-item active">{{c}}</a>
+</div>
 <button class="btn btn-success" (click)="onClick()" >Success</button>

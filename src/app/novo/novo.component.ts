@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicoService } from '../servico.service';
 
 @Component({
   selector: 'app-novo',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class NovoComponent implements OnInit {
 
   name="";
-  constructor() { }
+  cursos: string[];
+  constructor(private cursosService: ServicoService) {
+    this.cursos=cursosService.getCursos();
+
+   }
 
   ngOnInit() {
   }
